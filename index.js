@@ -56,6 +56,9 @@ function editS () {
 
 })
 
+const keepAlive = require("./keepAlive");
+keepAlive();
+	
 //const exampleEmbed = EmbedBuilder.from(embed).setTitle('New title');
 }
 editS()
@@ -69,4 +72,5 @@ setInterval(editS, 120000);
     client.handleCommands(commandFolders, "./src/commands");
     client.login(process.env.token)
 })();
+
 
